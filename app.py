@@ -2,6 +2,15 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        return "Registration successful"
+    elif request.method == "GET":
+        return "Retrieving information to render registration form"
+    else:
+        return "Invalid request method"
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -96,3 +105,5 @@ def fitness_center_trainer_rating(id, trainer_id):
         return f"Submitting a new rating for trainer ID {trainer_id} at fitness center ID {id}"
     elif request.method == "PUT":
         return f"Updating existing rating for trainer ID {trainer_id} at fitness center
+
+
