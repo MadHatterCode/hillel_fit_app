@@ -104,6 +104,7 @@ def fitness_center_trainer_rating(id, trainer_id):
     elif request.method == "POST":
         return f"Submitting a new rating for trainer ID {trainer_id} at fitness center ID {id}"
     elif request.method == "PUT":
-        return f"Updating existing rating for trainer ID {trainer_id} at fitness center
+        return f"Updating existing rating for trainer ID {trainer_id} at fitness center"
+
 
 
