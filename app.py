@@ -22,7 +22,6 @@ def register():
 def user():
     if request.method == "GET":
         return db_utils.get_from_db('SELECT * FROM user WHERE id=1')
-    elif request.method == "PUT":
     else:
         return "Invalid request method"
 
